@@ -62,7 +62,7 @@
 <h1>Task Manager</h1>
 <form action="/add" method="post">
     <input type="text" name="name" placeholder="Task Name" required>
-    <input type="text" name="description" placeholder="Task Description" required>
+    <input type="text" name="description" placeholder="Task Description">
     <button type="submit">Add Task</button>
 </form>
 
@@ -75,7 +75,7 @@
         <form th:action="@{/edit/{id}(id=${task.id})}" method="post">
             <button type="submit" class="edit-button">Save</button>
             <input type="text" name="name" th:value="${task.name}" required>
-            <input type="text" name="description" th:value="${task.description}" required>
+            <input type="text" name="description" th:value="${task.description}">
         </form>
     </li>
 </ul>

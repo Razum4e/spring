@@ -17,9 +17,15 @@ public class TaskController {
     private static final Sort DEFAULT_SORT_ORDER = Sort.by(Sort.Direction.DESC, "id");
 
     private final TaskRepository taskRepository;
+    private final TaskCategoryRepository taskCategoryRepository;
+    //тут прикрутить бы что-нибудь на формочку index для взаимодействия
 
-    public TaskController(TaskRepository taskRepository) {
+    public TaskController(
+            TaskRepository taskRepository,
+            TaskCategoryRepository taskCategoryRepository
+    ) {
         this.taskRepository = taskRepository;
+        this.taskCategoryRepository = taskCategoryRepository;
     }
 
     @GetMapping("/")

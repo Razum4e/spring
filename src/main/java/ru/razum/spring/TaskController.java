@@ -2,9 +2,7 @@ package ru.razum.spring;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ru.razum.spring.model.Task;
 
 @Controller
@@ -30,5 +28,10 @@ public class TaskController {
         taskRepository.save(task);
         return "redirect:/";
     }
-}
 
+    @PostMapping("/delete/{id}")
+    public String deleteTask(@PathVariable Long id) {
+        taskRepository.deleteById(id);
+        return "redirect:/";
+    }
+}

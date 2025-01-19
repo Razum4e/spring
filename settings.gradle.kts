@@ -1,1 +1,1 @@
-rootProject.name = "razumSpring"
+rootProject.name = "TaskManager"

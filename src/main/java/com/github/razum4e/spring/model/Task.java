@@ -1,4 +1,4 @@
-package ru.razum.spring.model;
+package com.github.razum4e.spring.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

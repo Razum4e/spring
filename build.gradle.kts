@@ -4,7 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "ru.razum.spring"
+group = "com.github.razum4e.spring"
 version = "0.0.1-SNAPSHOT"
 
 java {

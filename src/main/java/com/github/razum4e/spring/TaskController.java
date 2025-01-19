@@ -1,9 +1,9 @@
-package ru.razum.spring;
+package com.github.razum4e.spring;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.razum.spring.model.Task;
+import com.github.razum4e.spring.model.Task;
 
 @Controller
 public class TaskController {

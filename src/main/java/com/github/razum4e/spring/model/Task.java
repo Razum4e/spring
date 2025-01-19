@@ -1,40 +1,25 @@
 package com.github.razum4e.spring.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity(name = "tasks")
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Task extends Named {
+    @ManyToOne
+    @JoinColumn(name = "task_category")
+    private TaskCategory category;
 
-    private String name;
-    private String description;
-
-    public Long getId() {
-        return id;
+    public Task() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Task(long id) {
+        super(id);
     }
 
-    public String getName() {
-        return name;
+    public TaskCategory getCategory() {
+        return category;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCategory(TaskCategory category) {
+        this.category = category;
     }
 }

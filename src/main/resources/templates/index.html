@@ -10,37 +10,52 @@
 
         li {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 8px;
             position: relative;
+            transition: background-color 0.3s;
         }
 
-        .delete-button {
+        li input {
+            margin-right: 8px;
+            padding: 5px;
+            flex-grow: 1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: margin-right 0.3s;
+        }
+
+        .delete-button, .edit-button {
             display: none;
-            background-color: red;
             color: white;
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
             cursor: pointer;
+            transition: opacity 0.3s;
         }
 
-        li:hover .delete-button {
-            display: block;
+        .delete-button {
+            background-color: red;
+        }
+
+        .edit-button {
+            background-color: coral;
         }
 
         li:hover {
             background-color: #f9f9f9;
         }
 
-        li div {
-            flex-grow: 1;
-            text-align: left;
+        li:hover .delete-button,
+        li:hover .edit-button {
+            display: inline-block;
         }
+
     </style>
 </head>
 <body>
@@ -57,10 +72,11 @@
         <form th:action="@{/delete/{id}(id=${task.id})}" method="post">
             <button type="submit" class="delete-button">Delete</button>
         </form>
-        <div>
-            <span th:text="${task.name}">Task Name</span> -
-            <span th:text="${task.description}">Task Description</span>
-        </div>
+        <form th:action="@{/edit/{id}(id=${task.id})}" method="post">
+            <button type="submit" class="edit-button">Save</button>
+            <input type="text" name="name" th:value="${task.name}" required>
+            <input type="text" name="description" th:value="${task.description}" required>
+        </form>
     </li>
 </ul>
 </body>

@@ -1,4 +1,4 @@
-package com.github.razum4e.spring.model;
+package com.github.razum4e.spring.taskManager.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

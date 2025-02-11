@@ -1,7 +1,7 @@
-package com.github.razum4e.spring;
+package com.github.razum4e.spring.taskManager;
 
-import com.github.razum4e.spring.model.TaskCategory;
-import com.github.razum4e.spring.model.TaskCategorySet;
+import com.github.razum4e.spring.taskManager.model.TaskCategory;
+import com.github.razum4e.spring.taskManager.model.TaskCategorySet;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,6 +1,6 @@
-package com.github.razum4e.spring;
+package com.github.razum4e.spring.taskManager;
 
-import com.github.razum4e.spring.model.Task;
+import com.github.razum4e.spring.taskManager.model.Task;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

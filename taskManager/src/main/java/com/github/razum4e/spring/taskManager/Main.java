@@ -1,4 +1,4 @@
-package com.github.razum4e.spring;
+package com.github.razum4e.spring.taskManager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

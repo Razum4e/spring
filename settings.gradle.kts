@@ -1,1 +1,3 @@
-rootProject.name = "TaskManager"
+rootProject.name = "razumSpring"
+include("taskManager")
+include("springBookPro")

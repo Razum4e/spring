@@ -22,7 +22,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
         System.out.println(messageProvider.getMessage());
     }
 
-    @Autowired
+    @Autowired // or @Resource(name = "messageProvider") or @Inject
     @Override
     public void setMessageProvider(MessageProvider provider) {
         System.out.println(" --> StandardOutMessageRenderer: setting the provider");

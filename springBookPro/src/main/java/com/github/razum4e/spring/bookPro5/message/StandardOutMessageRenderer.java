@@ -1,5 +1,9 @@
 package com.github.razum4e.spring.bookPro5.message;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service("renderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
 
     private MessageProvider messageProvider;
@@ -18,6 +22,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
         System.out.println(messageProvider.getMessage());
     }
 
+    @Autowired
     @Override
     public void setMessageProvider(MessageProvider provider) {
         System.out.println(" --> StandardOutMessageRenderer: setting the provider");

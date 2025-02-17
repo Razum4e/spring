@@ -3,7 +3,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="oracle" name="wiseworm" class="com.github.razum4e.spring.bookPro5.BookwormOracle"/>
+    <bean id="oracle"
+          name="wiseworm"
+          class="com.github.razum4e.spring.bookPro5.oracle.BookwormOracle"/>
 </beans>
